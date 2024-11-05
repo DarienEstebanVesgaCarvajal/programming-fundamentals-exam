@@ -1,17 +1,11 @@
-#Desarrolle el código fuente de un programa que permita ingresar cinco voltajes,
-#obtener su promedio
-#y visualizar `"ALTO VOLTAJE"`, si su promedio es mayor a 220,
-#caso contrario sea menor mostrar `"VOLTAJE CORRECTO"`.
+#Desarrolle el código fuente de un programa que permita calcular el área de un triángulo equilátero,
+#adicional visualizar `"DATOS NO VÁLIDOS"`,si el área es mayor a 1000.
+#La fórmula para calcular el área `A` de un triángulo equilátero de lado `a` es: A = (R3/4)*(a**2)
 
-firstVoltage = int(input("Cuál es el primer voltaje?: "))
-secondVoltage = int(input("Cuál es el segundo voltaje?: "))
-thirdVoltage = int(input("Cuál es el tercer voltaje?: "))
-fourthVoltage = int(input("Cuál es el cuarto voltaje?: "))
-fifthVoltaje = int(input("Cuál es el quinto voltaje?: "))
+side = float(input("Cuánto miden un lado del tríangulo?: "))
 
-average = (firstVoltage + secondVoltage + thirdVoltage + fourthVoltage + fifthVoltaje)/5
-
-if average > 220:
-    print("ALTO VOLAJE")
+if side < 1000:
+    area = ((3 ** 0.5 / 4) * (side ** 2))
+    print(f"El valor del área es: {area}.")
 else:
-    print("VOLTAJE CORRECTO")
+    print("DATOS NO VÁLIDOS")
