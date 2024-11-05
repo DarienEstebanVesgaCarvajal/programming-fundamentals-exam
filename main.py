@@ -1,17 +1,9 @@
-#Desarrolle un programa que solicite ingrese tres voltajes distintos 
-#e indique si el promedio de los voltajes ingresados es menor a 115 visualice `"VOLTAJE CORRECTO"`,
-#caso contrario sea mayor a 115 y menor a 220 visualice `"ALTO VOLTAJE"`,
-#y si es mayor a 220 visualice `"PELIGRO"`.
+#Desarrolle el código fuente de un programa que permita ingresar y leer el valor correspondiente a una distancia en metros
+#y la visualice expresadas en km.
+#Para convertir `metros` a `kilómetros`, puedes usar la siguiente fórmula: km=m/1000
 
-firstVoltage = float(input("Cuál es el primer voltage?: "))
-secondVoltage = float(input("Cuál es el segundo voltage?: "))
-thirdVoltage = float(input("Cuál es el tercer voltage?: "))
+distance = float(input("Cuál es la distancia?: (En metros)"))
 
-average = (firstVoltage + secondVoltage + thirdVoltage)/3
+distanceKM = distance/1000
 
-if average <= 115:
-    print("VOLTAJE CORRECTO")
-elif average > 115 and average < 220:
-    print("ALTO VOLTAJE")
-elif average >= 220:
-    print("PELIGRO")
+print(f"""La distancia en kilometros es: {distanceKM}""")
