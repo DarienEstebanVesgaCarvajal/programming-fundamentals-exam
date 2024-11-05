@@ -1,11 +1,17 @@
-#Desarrolle el código fuente de un programa que permita calcular el área de un triángulo equilátero,
-#adicional visualizar `"DATOS NO VÁLIDOS"`,si el área es mayor a 1000.
-#La fórmula para calcular el área `A` de un triángulo equilátero de lado `a` es: A = (R3/4)*(a**2)
+#Desarrolle un programa que solicite ingrese tres voltajes distintos 
+#e indique si el promedio de los voltajes ingresados es menor a 115 visualice `"VOLTAJE CORRECTO"`,
+#caso contrario sea mayor a 115 y menor a 220 visualice `"ALTO VOLTAJE"`,
+#y si es mayor a 220 visualice `"PELIGRO"`.
 
-side = float(input("Cuánto miden un lado del tríangulo?: "))
+firstVoltage = float(input("Cuál es el primer voltage?: "))
+secondVoltage = float(input("Cuál es el segundo voltage?: "))
+thirdVoltage = float(input("Cuál es el tercer voltage?: "))
 
-if side < 1000:
-    area = ((3 ** 0.5 / 4) * (side ** 2))
-    print(f"El valor del área es: {area}.")
-else:
-    print("DATOS NO VÁLIDOS")
+average = (firstVoltage + secondVoltage + thirdVoltage)/3
+
+if average <= 115:
+    print("VOLTAJE CORRECTO")
+elif average > 115 and average < 220:
+    print("ALTO VOLTAJE")
+elif average >= 220:
+    print("PELIGRO")
